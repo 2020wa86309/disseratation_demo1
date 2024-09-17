@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BITS Diagnostics - Book Appointment</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Book Your Appointment</h1>
+        <form action="bookAppointment" method="post">
+            <div class="form-group">
+                <label for="appointment_date">Select Date:</label>
+                <input type="date" id="appointment_date" name="appointment_date" required>
+            </div>
+            <div class="form-group">
+                <label for="test_id">Select Test:</label>
+                <select id="test_id" name="test_id" required>
+                    <option value="1">CBC (Complete Blood Count)</option>
+                    <option value="2">Thyroid Profile Total (T3, T4, & TSH)</option>
+                    <option value="3">LFT (Liver Function Test)</option>
+                    <option value="4">Diabetes Screening (HbA1C & Fasting Sugar)</option>
+                </select>
+            </div>
+            <button type="submit">Book Appointment</button>
+            <p><img src="images/logo.png" alt="BITS Diagnostics Logo" class="logo"></p>
+        </form>
+    </div>
+</body>
+</html>
