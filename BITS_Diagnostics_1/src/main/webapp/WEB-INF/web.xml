@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+                             http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+ 
+    <!-- Display name of your web application -->
+    <display-name>BITS_Diagnostics_1</display-name>
+
+    <!-- Define the LoginServlet -->
+    <servlet>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>com.bitsdiagnostics.servlet.LoginServlet</servlet-class>
+    </servlet>
+
+    <!-- Map the LoginServlet to a URL pattern -->
+    <servlet-mapping>
+        <servlet-name>LoginServlet</servlet-name>
+        <url-pattern>/LoginServlet</url-pattern>
+    </servlet-mapping>
+    
+   	<servlet>
+        <servlet-name>ConfirmAppointmentServlet</servlet-name>
+        <servlet-class>com.bitsdiagnostics.servlet.ConfirmAppointmentServlet</servlet-class>
+    </servlet>
+
+	<servlet-mapping>
+        <servlet-name>ConfirmAppointmentServlet</servlet-name>
+        <url-pattern>/ConfirmAppointmentServlet</url-pattern>
+    </servlet-mapping>
+    
+  <servlet>
+        <servlet-name>ConfirmTestServlet</servlet-name>
+        <servlet-class>com.bitsdiagnostics.servlet.ConfirmTestServlet</servlet-class>
+    </servlet>
+
+    <!-- Map the LoginServlet to a URL pattern -->
+    <servlet-mapping>
+        <servlet-name>ConfirmTestServlet</servlet-name>
+        <url-pattern>/ConfirmTestServlet</url-pattern>
+    </servlet-mapping>
+
+
+<servlet>
+        <servlet-name>DashboardServlet</servlet-name>
+        <servlet-class>com.bitsdiagnostics.servlet.DashboardServlet</servlet-class>
+    </servlet>
+
+	<servlet-mapping>
+        <servlet-name>DashboardServlet</servlet-name>
+        <url-pattern>/DashboardServlet</url-pattern>
+    </servlet-mapping>
+	
+    <!-- Welcome file list, which defines the default pages to load -->
+    <welcome-file-list>
+        <welcome-file>index.html</welcome-file>
+    </welcome-file-list>
+    
+     <servlet>
+        <servlet-name>DoctorServlet</servlet-name>
+        <servlet-class>com.bitsdiagnostics.servlet.DoctorServlet</servlet-class>
+    </servlet>
+
+    <!-- Map the LoginServlet to a URL pattern -->
+    <servlet-mapping>
+        <servlet-name>DoctorServlet</servlet-name>
+        <url-pattern>/DoctorServlet</url-pattern>
+    </servlet-mapping>
+    
+      <servlet>
+        <servlet-name>DoctorDetails</servlet-name>
+        <servlet-class>com.bitsdiagnostics.servlet.DoctorDetails</servlet-class>
+    </servlet>
+
+    <!-- Map the LoginServlet to a URL pattern -->
+    <servlet-mapping>
+        <servlet-name>DoctorDetails</servlet-name>
+        <url-pattern>/DoctorDetails</url-pattern>
+    </servlet-mapping>
+    
+    
+    <servlet>
+        <servlet-name>DoctorListServlet</servlet-name>
+        <servlet-class>com.bitsdiagnostics.servlet.DoctorListServlet</servlet-class>
+    </servlet>
+
+    <!-- Map the LoginServlet to a URL pattern -->
+    <servlet-mapping>
+        <servlet-name>DoctorListServlet</servlet-name>
+        <url-pattern>/DoctorListServlet</url-pattern>
+    </servlet-mapping>
+    
+    <!-- Error page configurations -->
+    <error-page>
+        <error-code>404</error-code>
+        <location>/error404.jsp</location>
+    </error-page>
+
+    <error-page>
+        <exception-type>java.lang.Exception</exception-type>
+        <location>/error404.jsp</location>
+    </error-page>
+    
+    <error-page>
+        <error-code>500</error-code>
+        <location>/error404.jsp</location>
+    </error-page>
+
+
+</web-app>   
