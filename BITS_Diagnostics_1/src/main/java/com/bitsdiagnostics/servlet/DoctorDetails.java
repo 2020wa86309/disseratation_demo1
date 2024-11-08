@@ -58,7 +58,7 @@ public class DoctorDetails extends HttpServlet {
                 request.getRequestDispatcher("doctorDetail.jsp").forward(request, response);
             } else {
                 // If no doctor is found
-                response.getWriter().println("Doctor not found.");
+                response.getWriter().println("Doctor not found. Please Try Again with correct Name");
             }
 
         } catch (Exception e) {
